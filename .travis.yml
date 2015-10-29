@@ -5,11 +5,11 @@ sudo: false
 
 matrix:
   include:
-    - env: GHCVER=7.8.4
+    - env: GHCVER=7.8.4 ARGS=""
       addons: {apt: {packages: [ghc-7.8.4], sources: [hvr-ghc]}}
-    - env: GHCVER=7.10.2
+    - env: GHCVER=7.10.2 ARGS=""
       addons: {apt: {packages: [ghc-7.10.2],sources: [hvr-ghc]}}
-    - env: GHCVER=head
+    - env: GHCVER=head ARGS="--skip-ghc-check"
       addons: {apt: {packages: [ghc-head],  sources: [hvr-ghc]}}
   allow_failures:
      - env: GHCVER=head
