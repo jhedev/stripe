@@ -23,7 +23,7 @@ before_install:
  - export PATH=~/.local/bin:$PATH
 
 install:
- - stack build
+ - stack $ARGS build
 
 script:
  - stack test
